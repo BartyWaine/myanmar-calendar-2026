@@ -3,23 +3,51 @@ body {
     text-align: center;
     background-color: #FFF8F0;
     color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background-color: #FFEBE8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h1 {
-    margin-top: 20px;
+    margin: 0;
     color: #FF6F61;
 }
 
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
 .month {
-    margin: 20px;
-    padding: 10px;
+    margin: 15px;
+    padding: 15px;
     border: 2px dashed #FFD700;
     border-radius: 15px;
-    display: inline-block;
+    width: 220px;
+    background-color: #FFF;
+    transition: transform 0.2s;
+}
+
+.month:hover {
+    transform: scale(1.05);
 }
 
 .month img {
     width: 200px;
     height: auto;
     border-radius: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 15px;
+    background-color: #FFEBE8;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
