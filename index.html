@@ -3,29 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Youth Calendar 2026</title>
+  <title>Dynamic Calendar</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Youth Program Calendar – 2026</h1>
-
-  <!-- Example: January -->
   <section class="calendar">
     <header class="cal-header">
-      <div class="cal-title">January 2026</div>
-      <div class="cal-subtitle">Mon–Sun</div>
+      <button id="prev">←</button>
+      <div class="cal-title" id="title"></div>
+      <button id="next">→</button>
     </header>
-    <div class="cal-grid">
+
+    <div class="cal-grid" id="grid">
       <div class="dow">Mon</div><div class="dow">Tue</div><div class="dow">Wed</div>
       <div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div><div class="dow">Sun</div>
-
-      <!-- Fill days -->
-      <div class="day" data-event="New Year Celebration 🎉"><span class="num">1</span></div>
-      <div class="day"><span class="num">2</span></div>
-      <!-- … continue until 31 -->
+      <!-- Days will be injected here by JS -->
     </div>
   </section>
 
-  <!-- Repeat for February … December -->
+  <script src="script.js"></script>
 </body>
 </html>
