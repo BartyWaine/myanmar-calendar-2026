@@ -1,69 +1,74 @@
 body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6, #9333ea);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(#FFF8F0, #FFFAF0);
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.calendar {
-  width: min(700px, 95vw);
-  background: rgba(255,255,255,0.1);
-  border-radius: 16px;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+header {
+    padding: 20px;
+    background: #FF6F61;
+    color: #FFF;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.cal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: rgba(0,0,0,.2);
+#calendar {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #FFF;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.cal-title {
-  font-weight: 600;
-  font-size: 1.2rem;
+#month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.cal-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+#month-header button {
+    background: #FFEBE8;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.dow, .day {
-  padding: .7rem;
-  border-bottom: 1px solid rgba(255,255,255,.2);
-  display: grid;
-  place-items: center;
+#month-header h2 {
+    margin: 0;
+    color: #FF6F61;
 }
 
-.dow {
-  font-size: .8rem;
-  color: #fef9c3;
-  background: rgba(0,0,0,.3);
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.day {
-  min-height: 70px;
-  border-right: 1px solid rgba(255,255,255,.2);
-  transition: transform .2s ease, background .2s ease;
+th, td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.day:nth-child(7n) { border-right: none; }
-
-.day:hover {
-  transform: scale(1.05);
-  background: rgba(250, 204, 21, 0.2);
-  cursor: pointer;
+th {
+    background: #FFEBE8;
+    color: #FF6F61;
 }
 
-.today {
-  outline: 2px solid #facc15;
-  outline-offset: -2px;
-  border-radius: 8px;
+td {
+    background: #FFF0F5;
+    margin: 2px;
+    cursor: pointer;
+}
+
+td:hover {
+    background: #FFD700;
+    transform: scale(1.1);
 }
