@@ -1,26 +1,33 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="my">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dynamic Calendar</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth-Friendly Myanmar Calendar 2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="calendar">
-    <header class="cal-header">
-      <button id="prev">←</button>
-      <div class="cal-title" id="title"></div>
-      <button id="next">→</button>
-    </header>
 
-    <div class="cal-grid" id="grid">
-      <div class="dow">Mon</div><div class="dow">Tue</div><div class="dow">Wed</div>
-      <div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div><div class="dow">Sun</div>
-      <!-- Days will be injected here by JS -->
+<header>
+    <h1>🌸 Youth-Friendly Myanmar Calendar 2026 🌸</h1>
+</header>
+
+<div id="calendar">
+    <div id="month-header">
+        <button id="prev">⬅</button>
+        <h2 id="month-name"></h2>
+        <button id="next">➡</button>
     </div>
-  </section>
+    <table id="calendar-table">
+        <tr>
+            <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+        <tbody id="calendar-body">
+        <!-- Days generated dynamically -->
+        </tbody>
+    </table>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
