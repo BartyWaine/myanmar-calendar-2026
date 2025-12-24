@@ -1,48 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 :root {
-  --bg: #0f172a;
-  --panel: #111827;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #3b82f6;
-  --grid: #1f2937;
+  --bg: linear-gradient(135deg, #06b6d4, #3b82f6, #9333ea);
+  --accent: #facc15;
+  --text: #fff;
+  --panel: rgba(255,255,255,0.1);
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
-  background: linear-gradient(180deg, #0b1220, #0f172a 40%, #0f172a);
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
   color: var(--text);
   display: grid;
   place-items: center;
   min-height: 100vh;
 }
 
+h1 {
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--accent);
+}
+
 .calendar {
   width: min(680px, 92vw);
   background: var(--panel);
-  border: 1px solid #1f2937;
-  border-radius: 14px;
+  border-radius: 16px;
+  margin: 1.5rem auto;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
 }
 
 .cal-header {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: .75rem;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--grid);
+  padding: 1rem;
+  background: rgba(0,0,0,.2);
 }
 
 .cal-title {
   font-weight: 600;
-  letter-spacing: .02em;
+  font-size: 1.2rem;
 }
 
 .cal-subtitle {
-  color: var(--muted);
-  font-size: .95rem;
+  color: #fef9c3;
+  font-size: .9rem;
 }
 
 .cal-grid {
@@ -52,40 +59,48 @@ body {
 
 .dow, .day {
   padding: .7rem .6rem;
-  border-bottom: 1px solid var(--grid);
+  border-bottom: 1px solid rgba(255,255,255,.2);
   display: grid;
   place-items: center;
+  position: relative;
 }
 
 .dow {
   font-size: .8rem;
-  color: var(--muted);
-  background: #0f172a;
-  border-bottom: 1px solid var(--grid);
+  color: #fef9c3;
+  background: rgba(0,0,0,.3);
 }
 
 .day {
   min-height: 70px;
-  border-right: 1px solid var(--grid);
+  border-right: 1px solid rgba(255,255,255,.2);
+  transition: transform .2s ease, background .2s ease;
 }
 
-.day:nth-child(7n) {
-  border-right: none;
-}
+.day:nth-child(7n) { border-right: none; }
 
-.today {
-  outline: 2px solid var(--accent);
-  outline-offset: -2px;
-  border-radius: 8px;
-  background: #0b1220;
-}
-
-.other-month {
-  color: #6b7280;
+.day:hover {
+  transform: scale(1.05);
+  background: rgba(250, 204, 21, 0.2);
+  cursor: pointer;
 }
 
 .num {
   justify-self: start;
   align-self: start;
   font-weight: 600;
+}
+
+.day[data-event]:hover::after {
+  content: attr(data-event);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: .4rem .6rem;
+  border-radius: 6px;
+  font-size: .8rem;
+  white-space: nowrap;
 }
