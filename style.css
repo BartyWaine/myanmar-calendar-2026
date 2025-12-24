@@ -1,34 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-:root {
-  --bg: linear-gradient(135deg, #06b6d4, #3b82f6, #9333ea);
-  --accent: #facc15;
-  --text: #fff;
-  --panel: rgba(255,255,255,0.1);
-}
-
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6, #9333ea);
+  color: #fff;
   display: grid;
   place-items: center;
   min-height: 100vh;
 }
 
-h1 {
-  margin: 1rem;
-  font-size: 2rem;
-  text-align: center;
-  color: var(--accent);
-}
-
 .calendar {
-  width: min(680px, 92vw);
-  background: var(--panel);
+  width: min(700px, 95vw);
+  background: rgba(255,255,255,0.1);
   border-radius: 16px;
-  margin: 1.5rem auto;
   overflow: hidden;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 20px rgba(0,0,0,.3);
@@ -36,8 +19,8 @@ h1 {
 
 .cal-header {
   display: flex;
-  justify-content: center;
-  gap: .75rem;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   background: rgba(0,0,0,.2);
 }
@@ -47,22 +30,16 @@ h1 {
   font-size: 1.2rem;
 }
 
-.cal-subtitle {
-  color: #fef9c3;
-  font-size: .9rem;
-}
-
 .cal-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
 .dow, .day {
-  padding: .7rem .6rem;
+  padding: .7rem;
   border-bottom: 1px solid rgba(255,255,255,.2);
   display: grid;
   place-items: center;
-  position: relative;
 }
 
 .dow {
@@ -85,22 +62,8 @@ h1 {
   cursor: pointer;
 }
 
-.num {
-  justify-self: start;
-  align-self: start;
-  font-weight: 600;
-}
-
-.day[data-event]:hover::after {
-  content: attr(data-event);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #111;
-  color: #fff;
-  padding: .4rem .6rem;
-  border-radius: 6px;
-  font-size: .8rem;
-  white-space: nowrap;
+.today {
+  outline: 2px solid #facc15;
+  outline-offset: -2px;
+  border-radius: 8px;
 }
