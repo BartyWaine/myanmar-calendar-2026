@@ -3,39 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calendar Example</title>
-  <!-- Link to external CSS -->
+  <title>Youth Calendar 2026</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="calendar" aria-label="Calendar for December 2025">
+  <h1>Youth Program Calendar – 2026</h1>
+
+  <!-- Example: January -->
+  <section class="calendar">
     <header class="cal-header">
-      <div class="cal-title">December 2025</div>
+      <div class="cal-title">January 2026</div>
       <div class="cal-subtitle">Mon–Sun</div>
     </header>
-
     <div class="cal-grid">
       <div class="dow">Mon</div><div class="dow">Tue</div><div class="dow">Wed</div>
       <div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div><div class="dow">Sun</div>
 
-      <!-- Example layout -->
-      <div class="day other-month"><span class="num">1</span></div>
-      <div class="day other-month"><span class="num">2</span></div>
-      <div class="day other-month"><span class="num">3</span></div>
-      <div class="day other-month"><span class="num">4</span></div>
-      <div class="day other-month"><span class="num">5</span></div>
-      <div class="day other-month"><span class="num">6</span></div>
-      <div class="day other-month"><span class="num">7</span></div>
-
-      <div class="day"><span class="num">8</span></div>
-      <div class="day"><span class="num">9</span></div>
-      <div class="day today"><span class="num">10</span></div>
-      <div class="day"><span class="num">11</span></div>
-      <div class="day"><span class="num">12</span></div>
-      <div class="day"><span class="num">13</span></div>
-      <div class="day"><span class="num">14</span></div>
-      <!-- Continue filling days -->
+      <!-- Fill days -->
+      <div class="day" data-event="New Year Celebration 🎉"><span class="num">1</span></div>
+      <div class="day"><span class="num">2</span></div>
+      <!-- … continue until 31 -->
     </div>
   </section>
+
+  <!-- Repeat for February … December -->
 </body>
 </html>
